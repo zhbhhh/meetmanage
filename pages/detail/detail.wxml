@@ -1,0 +1,68 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="detail-page">
+  <!-- 顶部：会议海报（一张图片） -->
+  <view class="top-banner">
+    <image class="banner-img" src="{{meeting.cover}}" mode="aspectFill" />
+  </view>
+
+  <!-- 卡片宫格 -->
+  <view class="nav-grid">
+    <!-- 第一行：欢迎致辞 / 会议信息（宽高比 2:1） -->
+    <view class="grid-row">
+      <view class="nav-cell size-lg" data-url="{{navItems[0].url}}" bindtap="handleNav">
+        <view class="cell-title">{{navItems[0].label}}</view>
+        <view class="cell-en">{{navItems[0].en}}</view>
+        <image class="cell-icon" src="{{navItems[0].icon}}" mode="aspectFit" />
+      </view>
+      <view class="nav-cell size-lg" data-url="{{navItems[1].url}}" bindtap="handleNav">
+        <view class="cell-title">{{navItems[1].label}}</view>
+        <view class="cell-en">{{navItems[1].en}}</view>
+        <image class="cell-icon" src="{{navItems[1].icon}}" mode="aspectFit" />
+      </view>
+    </view>
+
+    <!-- 第二行：中间会议日程（宽高比 2:3），两侧各上下两张卡片，顶端/底端对齐 -->
+    <view class="grid-row row-middle">
+      <!-- 左列：上-会议通知，下-学分领取 -->
+      <view class="col-side">
+        <view class="nav-cell side-cell" data-url="{{navItems[2].url}}" bindtap="handleNav">
+          <view class="cell-title">{{navItems[2].label}}</view>
+          <view class="cell-en">{{navItems[2].en}}</view>
+          <image class="cell-icon" src="{{navItems[2].icon}}" mode="aspectFit" />
+        </view>
+        <view class="nav-cell side-cell" data-url="{{navItems[5].url}}" bindtap="handleNav">
+          <view class="cell-title">{{navItems[5].label}}</view>
+          <view class="cell-en">{{navItems[5].en}}</view>
+          <image class="cell-icon" src="{{navItems[5].icon}}" mode="aspectFit" />
+        </view>
+      </view>
+
+      <!-- 中间：会议日程 -->
+      <view class="nav-cell mid-cell" data-url="{{navItems[3].url}}" bindtap="handleNav">
+        <view class="cell-title">{{navItems[3].label}}</view>
+        <view class="cell-en">{{navItems[3].en}}</view>
+        <image class="cell-icon" src="{{navItems[3].icon}}" mode="aspectFit" />
+      </view>
+
+      <!-- 右列：上-报名参会，下-照片直播 -->
+      <view class="col-side">
+        <view class="nav-cell side-cell" data-url="{{navItems[4].url}}" bindtap="handleNav">
+          <view class="cell-title">{{navItems[4].label}}</view>
+          <view class="cell-en">{{navItems[4].en}}</view>
+          <image class="cell-icon" src="{{navItems[4].icon}}" mode="aspectFit" />
+        </view>
+        <view class="nav-cell side-cell" data-url="{{navItems[6].url}}" bindtap="handleNav">
+          <view class="cell-title">{{navItems[6].label}}</view>
+          <view class="cell-en">{{navItems[6].en}}</view>
+          <image class="cell-icon" src="{{navItems[6].icon}}" mode="aspectFit" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部：一张图片 -->
+  <view class="bottom-banner">
+    <image class="banner-img" src="/images/banner-bottom.jpg" mode="aspectFill" />
+  </view>
+</view>

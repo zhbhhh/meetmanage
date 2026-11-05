@@ -1,0 +1,14 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="sub-page">
+  <view class="sec-card">
+    <view class="sec-title">会议日程</view>
+    <view class="schedule-item" wx:for="{{schedule}}" wx:key="index">
+      <view class="schedule-time">{{item.time}}</view>
+      <view>
+        <view class="schedule-title">{{item.title}}</view>
+        <view class="schedule-desc">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+</view>

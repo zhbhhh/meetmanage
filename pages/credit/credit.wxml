@@ -1,0 +1,14 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="sub-page">
+  <view class="sec-card">
+    <view class="sec-title">学分领取</view>
+    <view class="intro-p" wx:for="{{credit.tips}}" wx:key="index">{{item}}</view>
+    <button
+      class="btn-primary {{status === '已结束' ? 'disabled' : ''}}"
+      bindtap="handleApply"
+    >
+      {{status === '已结束' ? '申领已截止' : '在线申领'}}
+    </button>
+  </view>
+</view>

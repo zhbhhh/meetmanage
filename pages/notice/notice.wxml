@@ -1,0 +1,12 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="sub-page">
+  <view class="sec-card">
+    <view class="sec-title">会议通知</view>
+    <view class="notice-item" wx:for="{{notices}}" wx:key="index">
+      <view class="notice-dot"></view>
+      <view class="notice-title">{{item.title}}</view>
+      <view class="notice-date">{{item.date}}</view>
+    </view>
+  </view>
+</view>

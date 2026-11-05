@@ -1,0 +1,14 @@
+<view class="login-page">
+  <view class="login-logo">
+    <image class="logo-img" src="/images/banner-top.jpg" mode="aspectFill" />
+  </view>
+
+  <view class="login-title">会议管理</view>
+  <view class="login-sub">学术会议一站式管理平台</view>
+
+  <button class="login-btn {{loading ? 'disabled' : ''}}" bindtap="handleLogin">
+    {{loading ? '登录中...' : '微信一键登录'}}
+  </button>
+
+  <view class="login-tip">登录即代表同意《用户协议》与《隐私政策》</view>
+</view>

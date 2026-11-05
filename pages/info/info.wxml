@@ -1,0 +1,18 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="sub-page">
+  <view class="sec-card">
+    <view class="sec-title">会议信息</view>
+    <view class="kv-line">会议名称：{{meeting.title}}</view>
+    <view class="kv-line">会议简称：{{meeting.shortName}}</view>
+    <view class="kv-line">会议时间：{{meeting.date}}</view>
+    <view class="kv-line">会议地点：{{meeting.location}}</view>
+  </view>
+
+  <view class="sec-card">
+    <view class="sec-title">组织机构</view>
+    <view class="kv-line">主办单位：{{orgs.host}}</view>
+    <view class="kv-line">承办单位：{{orgs.organizer}}</view>
+    <view class="kv-line">协办单位：{{orgs.coOrganizer}}</view>
+  </view>
+</view>

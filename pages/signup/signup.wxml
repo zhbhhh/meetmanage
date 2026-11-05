@@ -1,0 +1,16 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="sub-page">
+  <view class="sec-card">
+    <view class="sec-title">报名参会</view>
+    <view class="kv-line">注册费用：{{register.fee}}</view>
+    <view class="kv-line">注册截止：{{register.deadline}}</view>
+    <view class="kv-note">{{register.note}}</view>
+    <button
+      class="btn-primary {{status === '已结束' ? 'disabled' : ''}}"
+      bindtap="handleSignup"
+    >
+      {{status === '已结束' ? '报名已截止' : '立即报名'}}
+    </button>
+  </view>
+</view>

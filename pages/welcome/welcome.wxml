@@ -1,0 +1,9 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="sub-page">
+  <view class="sec-card">
+    <view class="sec-title">欢迎致辞</view>
+    <view class="intro-p" wx:for="{{welcome.content}}" wx:key="index">{{item}}</view>
+    <view class="kv-line" style="margin-top: 24rpx; font-weight: bold;">{{welcome.speaker}}</view>
+  </view>
+</view>

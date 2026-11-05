@@ -1,0 +1,130 @@
+.detail-page {
+  min-height: 100vh;
+  background: #d9edf6;
+  padding-bottom: 0;
+}
+
+.loading {
+  text-align: center;
+  color: #8a8a99;
+  padding: 120rpx 0;
+}
+
+/* 顶部海报 */
+.top-banner {
+  width: 100%;
+  height: 420rpx;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 宫格 */
+.nav-grid {
+  padding: 32rpx 24rpx 8rpx;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+/* 通用卡片 */
+.nav-cell {
+  position: relative;
+  border-radius: 20rpx;
+  background: linear-gradient(165deg, #cfe9f4 0%, #a9d2e6 100%);
+  box-shadow: 0 6rpx 20rpx rgba(31, 93, 128, 0.12);
+  padding: 24rpx 28rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.nav-cell:active {
+  opacity: 0.85;
+}
+
+.cell-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #1c5d80;
+  letter-spacing: 4rpx;
+}
+
+.cell-en {
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  color: #4a8aa8;
+}
+
+.cell-icon {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+/* 第一行：宽高比 2:1
+   内容区宽 702rpx，卡片宽 48.5% ≈ 340rpx，高 170rpx */
+.size-lg {
+  width: 48.5%;
+  height: 170rpx;
+}
+
+/* 第二行：中间卡片宽高比 2:3
+   中间宽 40% ≈ 282rpx，高 423rpx；左右列各 26.5% ≈ 187rpx */
+.row-middle {
+  align-items: stretch;
+}
+
+.col-side {
+  width: 26.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-cell {
+  width: 100%;
+  height: 196rpx;
+  padding: 22rpx 24rpx;
+}
+
+.side-cell .cell-title {
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+}
+
+.side-cell .cell-en {
+  font-size: 20rpx;
+}
+
+.side-cell .cell-icon {
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.mid-cell {
+  width: 40%;
+  height: 423rpx;
+}
+
+/* 中间卡片图标放右上角 */
+.mid-cell .cell-icon {
+  top: 24rpx;
+  bottom: auto;
+}
+
+/* 底部横幅 */
+.bottom-banner {
+  width: 100%;
+  height: 300rpx;
+  margin-top: 24rpx;
+}

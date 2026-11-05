@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/detail/detail",
+    "pages/welcome/welcome",
+    "pages/info/info",
+    "pages/notice/notice",
+    "pages/agenda/agenda",
+    "pages/signup/signup",
+    "pages/credit/credit",
+    "pages/live/live"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1e5eff",
+    "navigationBarTitleText": "会议管理",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6fa",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

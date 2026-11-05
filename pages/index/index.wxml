@@ -1,0 +1,31 @@
+<view class="index-page">
+  <view class="header">
+    <view class="header-title">会议列表</view>
+    <view class="header-action" bindtap="handleLogout">退出登录</view>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading">加载中...</view>
+
+  <view wx:else class="meeting-list">
+    <view
+      class="meeting-item card"
+      wx:for="{{meetingList}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="goDetail"
+    >
+      <view class="item-top">
+        <text class="item-tag {{item.status === '报名中' ? 'tag-open' : (item.status === '已结束' ? 'tag-closed' : 'tag-prep')}}">{{item.status}}</text>
+        <text class="item-short">{{item.shortName}}</text>
+      </view>
+      <view class="item-title">{{item.title}}</view>
+      <view class="item-info">
+        <view class="info-row">时间：{{item.date}}</view>
+        <view class="info-row">地点：{{item.location}}</view>
+      </view>
+      <view class="item-arrow">查看详情 ›</view>
+    </view>
+
+    <view wx:if="{{meetingList.length === 0}}" class="empty">暂无会议</view>
+  </view>
+</view>

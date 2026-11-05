@@ -1,0 +1,16 @@
+<view wx:if="{{loading}}" class="loading">加载中...</view>
+
+<view wx:else class="sub-page">
+  <view class="sec-card">
+    <view class="sec-title">照片直播</view>
+    <view class="live-grid">
+      <view class="live-item" wx:for="{{albums}}" wx:key="index" bindtap="handleAlbum">
+        <image class="live-cover" src="{{item.cover}}" mode="aspectFill" />
+        <view class="live-body">
+          <view class="live-name">{{item.title}}</view>
+          <view class="live-meta">{{item.date}} · {{item.count}} 张</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
